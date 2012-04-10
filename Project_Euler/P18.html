@@ -1,0 +1,125 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Colin Hughes" />
+<meta name="description" content="A website dedicated to the fascinating world of mathematics and programming" />
+<meta name="keywords" content="programming,mathematics,problems,puzzles" />
+
+<title>Problem 18 - Project Euler</title>
+<link rel="shortcut icon" href="http://projecteuler.net/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style_main.css" />
+<script type="text/javascript" src="MathJax/MathJax.js"></script>
+<link rel="stylesheet" type="text/css" href="style_light.css" /></head>
+
+<body>
+<div id="container">
+
+   <div id="nav" class="noprint">
+      <ul>
+<li><a href="about" title="About" accesskey="h">About</a></li>
+<li id="current"><a href="problems" title="Problems" accesskey="1">Problems</a></li>
+<li><a href="progress" title="Progress" accesskey="2">Progress</a></li>
+<li><a href="friends" title="Friends" accesskey="3">Friends</a></li>
+<li><a href="account" title="Account" accesskey="4">Account</a></li>
+<li><a href="news" title="News" accesskey="5">News</a></li>
+<li><a href="statistics" title="Statistics" accesskey="6">Statistics</a></li>
+<li><a href="logout=06621" title="Logout" accesskey="7">Logout</a></li>
+      </ul>
+   </div>
+<div id="info_panel"><div>Logged in as <strong>dhuang</strong><br />Wed, 11 Jan 2012, 03:46</div><div style="vertical-align:middle;">Lights: On <input type="radio" name="scheme" class="radio" value="light"checked="checked"  onclick="location.href='scheme=light';" />&nbsp; Off <input type="radio" name="scheme" class="radio" value="dark"  onclick="location.href='scheme=dark';" /></div><a href="rss2_euler.xml"><img src="images/icon_rss.png" alt="RSS Feed" title="RSS Feed" /></a><a href="secure=yes"><img src="images/icon_lock.png" alt="Use secure connection" title="Use secure connection" /></a></div>
+
+<div id="logo" class="noprint">
+   <img src="images/pe_banner_light.png" alt="Project Euler .net" />
+</div>
+
+<div id="content">
+<table style="width:100%" class="noprint"><tr><td><a href="problem=17" style="cursor:pointer;" class="info"><span style="color:#666;text-align:left;width:300px;">Go to problem 17 (Solved): How many letters would be needed to write all the numbers in words from 1 to 1000?</span><img src="images/icon_back_solved.png" alt="Next" /></a></td><td><div style="text-align:right;"><a href="problem=19" style="cursor:pointer;" class="info"><span style="color:#666;text-align:left;width:300px;right:0;">Go to problem 19 (Unsolved): How many Sundays fell on the first of the month during the twentieth century?</span><img src="images/icon_next.png" alt="Next" /></a></td></tr></table><div style="text-align:center;" class="print"><img src="images/pe_banner.png" alt="projecteuler.net" style="border:none;" /></div>
+<h2 style="cursor:help;" title="Solved by 41214">Problem 18</h2>
+<div title="Published on 31 May 2002 at 05:00 pm" style="cursor:help;color:#666;font-size:80%;">31 May 2002</div><br />
+<div class="problem_content" role="problem">
+<p>By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23.</p>
+<p style="text-align:center;font-family:courier new;font-size:12pt;"><span style="color:#ff0000;"><b>3</b></span><br />
+<span style="color:#ff0000;"><b>7</b></span> 4<br />
+2 <span style="color:#ff0000;"><b>4</b></span> 6<br />
+8 5 <span style="color:#ff0000;"><b>9</b></span> 3</p>
+<p>That is, 3 + 7 + 4 + 9 = 23.</p>
+<p>Find the maximum total from top to bottom of the triangle below:</p>
+<p style="text-align:center;font-family:courier new;">75<br />
+95 64<br />
+17 47 82<br />
+18 35 87 10<br />
+20 04 82 47 65<br />
+19 01 23 75 03 34<br />
+88 02 77 73 07 63 67<br />
+99 65 04 28 06 16 70 92<br />
+41 41 26 56 83 40 80 70 33<br />
+41 48 72 33 47 32 37 16 94 29<br />
+53 71 44 65 25 43 91 52 97 51 14<br />
+70 11 33 28 77 73 17 78 39 68 17 57<br />
+91 71 52 38 17 14 91 43 58 50 27 29 48<br />
+63 66 04 68 89 53 67 30 73 16 69 87 40 31<br />
+04 62 98 27 23 09 70 98 73 93 38 53 60 04 23</p>
+<p class="info"><b>NOTE:</b> As there are only 16384 routes, it is possible to solve this problem by trying every route. However, <a href="index.php?section=problems&amp;id=67">Problem 67</a>, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)</p>
+</div><br />
+<div style="text-align:center;" class="noprint">
+	<form name="form" method="post" action="problem=18">
+	<table width="400" cellpadding="10" align="center">
+	<tr>
+		<td>
+			<table>
+			<tr>
+				<td><div style="text-align:right;">Answer:</div></td>
+				<td>
+<div style="text-align:left;"><input size="20" type="text" name="guess" id="guess" maxlength="30" autocomplete="off" /></td></tr><tr><td colspan="2">            </td>
+         </tr>
+			<tr>
+				<td><div style="text-align:right;">Confirmation Code:</div></td>
+				<td><div style="text-align:left;"><input type="text" size="5" maxlength="5" autocomplete="off" name="confirm" /></div></td>
+			</tr>
+         <tr>
+            <td colspan="2">
+               <div style="text-align:center;font-size:80%;">
+               <img src="captcha/image_show.php?ekey=dea1648ed812" id="captcha" name="captcha" style="border:1px solid #999;width:120px;height:40px;" id="image" onclick="update_code();" title="Click to reload a new image" /><br />
+               Click image to refresh
+               </div>
+            </td>
+         </tr>
+         <tr>
+				<td>
+</td><td style="text-align:left;"><input type="submit" value="Check" />
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</form>
+<script type="text/javascript">
+var t=1000*60*20;
+function update_code() {
+   document.captcha.src = "captcha/image_show.php?ekey=dea1648ed812&unique=" + Math.random();
+   setTimeout("update_code();",t);
+}
+document.getElementById('guess').focus();
+scroll(0,0);
+setTimeout("update_code();",t);
+</script>
+</div></div>
+
+
+
+
+
+<div id="footer" class="noprint">
+<a href="copyright">Project Euler Copyright Information</a>
+<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+   <Work rdf:about="">
+      <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/" />
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   </Work>
+   <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</div>
+</div>
+<div style="height:1px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></body>
+</html>
